@@ -12,6 +12,10 @@ namespace AbstractFactoryPattern
     {
         static void Main(string[] args)
         {
+
+            //Abstract Factory
+            //https://www.codeproject.com/Articles/716413/Factory-Method-Pattern-vs-Abstract-Factory-Pattern
+
             IMachineFactory factory = new HighEndMachineFactory();// Or new LowEndMachineFactory();
             
             Shop shop = new Shop(factory);
