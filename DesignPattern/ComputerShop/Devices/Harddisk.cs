@@ -9,12 +9,12 @@ namespace ComputerShop.Devices
 
     public interface IHarddisk
     {
-        void GetHarddisk();
+        void StoreData();
     }
 
     public class HighEndHarddisk : IHarddisk
     {
-        public void GetHarddisk()
+        public void StoreData()
         {
             Console.WriteLine("High End Harddisk");
         }
@@ -22,7 +22,7 @@ namespace ComputerShop.Devices
 
     public class LowEndHarddisk : IHarddisk
     {
-        public void GetHarddisk()
+        public void StoreData()
         {
             Console.WriteLine("Low End Harddisk");
         }

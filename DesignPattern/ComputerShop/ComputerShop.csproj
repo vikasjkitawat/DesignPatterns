@@ -44,6 +44,7 @@
     <Compile Include="Devices\Monitor.cs" />
     <Compile Include="Devices\Processor.cs" />
     <Compile Include="Factories\HighEndMachineFactory.cs" />
+    <Compile Include="Factories\IMachineFactory.cs" />
     <Compile Include="Factories\LowEndMachineFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shop.cs" />

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ComputerShop;
+using ComputerShop.Factories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,11 @@ namespace AbstractFactoryPattern
     {
         static void Main(string[] args)
         {
+            IMachineFactory factory = new HighEndMachineFactory();// Or new LowEndMachineFactory();
+            
+            Shop shop = new Shop(factory);
+            shop.AssembleMachine();
+            Console.ReadKey();
         }
     }
 }

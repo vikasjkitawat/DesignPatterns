@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ComputerShop.Devices;
+using ComputerShop.Factories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ComputerShop
 {
-    class Shop
+    public class Shop
     {
         private IMachineFactory factory;
 
@@ -15,12 +17,17 @@ namespace ComputerShop
             this.factory = factory;
         }
 
-        public Computer AssembleMachine()
+        public void AssembleMachine()
         {
-            Computer computer = new Computer();
-            computer.Processor = factory.GetProcessor();
-            computer.Harddisk = factory.GetHarddisk();
-            computer.Monitor = factory.Display();
+            IProcessor processor = factory.GetRam();
+            IHarddisk hdd = factory.GetHardDisk();
+            IMonitor monitor = factory.GetMonitor();
+            //use all three and create machine
+
+            processor.GetProcessor();
+            hdd.StoreData();
+            monitor.Display();
+
         }
     }
 }
